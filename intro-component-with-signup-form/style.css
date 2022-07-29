@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  background-position: center;
+  color: white;
+}
+
+.container {
+  width: 375px;
+  padding: 48px 24px;
+  margin: auto;
+  overflow: hidden;
+  background-color: hsl(0, 100%, 74%) ;
+  background-image: url('./images/bg-intro-mobile.png');
+}
+
+.header {
+  margin: 48px 0;
+}
+
+h1 {
+  margin: 24px;
+}
+
+.deal {
+  /* margin: 66px 0 24px 0; */
+  /* margin-bottom: 20px; */
+  margin: 20px 0;
+  background-color: hsl(248, 32%, 49%);
+  padding: 20px 60px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);;
+}
+
+#error {
+  text-align: right;
+  color: hsl(0, 100%, 74%);
+}
+
+.signup {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.input-container.error input {
+  border-color: hsl(0, 100%, 74%);
+  color: hsl(0, 100%, 74%);
+  background-image: url(images/favicon-32x32.png);
+  background-position: right;
+  background-repeat: no-repeat;
+
+}
+
+/* input.error::after {
+  content: attr(data-error);
+  color: hsl(85, 100%, 74%);  
+} */
+
+ /* .input-container[data-error] input {
+  border-color: hsl(0, 100%, 74%);
+  color: hsl(0, 100%, 74%);
+} */
+
+
+.input-container.error[data-error]::after {
+  content: attr(data-error);
+  color: hsl(0, 100%, 74%);
+  display: block;
+  text-align: right;
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 16px 20px;
+  border: 1px solid hsl(246, 25%, 77%);
+  border-radius: 3px;
+}
+
+button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 20px;
+  color: white;
+  font-weight: 600;
+  background-color: hsl(154, 59%, 51%);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);;
+}
+
+.terms {
+  font-size: 12px;
+  color: hsl(246, 25%, 77%);
+  padding: 12px 20px;
+}
+
+.terms > strong {
+  color: hsl(0, 100%, 74%);
+}
+
+
+
+
+@media(min-width:1440px) {
+  .container {
+    width: 1440px;
+    padding: 120px 100px;
+    box-sizing: border-box;
+    background-image: url('./images/bg-intro-desktop.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header {
+    flex: 1;
+    padding: 60px;
+    text-align: left;
+  }
+
+  h1 {
+    margin: 0 0 24px 0;
+    font-size: 44px;
+    line-height: 48px;
+  }
+
+  .right {
+    flex: 1;
+    margin-right: 54px;
+  }
+}
